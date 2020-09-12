@@ -5,11 +5,12 @@ import (
 	"sort"
 )
 
+type Triplets struct {
+	First, Second, Third int
+}
+
 // FindTriplets returns all the triplets from an array such that the sum of the first two elements is equal to the third element
-func FindTriplets(input []int) {
-	type Triplets struct {
-		First, Second, Third int
-	}
+func FindTriplets(input []int) []Triplets {
 	result := []Triplets{}
 	resultMap := map[Triplets]bool{}
 	inputArr := make([]int, len(input))
@@ -40,8 +41,9 @@ func FindTriplets(input []int) {
 	for k := range resultMap {
 		result = append(result, k)
 	}
-	fmt.Println(result)
+	return result
 }
 func main() {
-	FindTriplets([]int{5, 32, 1, 7, 10, 50, 19, 21, 2})
+	answer := FindTriplets([]int{5, 32, 1, 7, 10, 50, 19, 21, 2})
+	fmt.Println(answer)
 }
