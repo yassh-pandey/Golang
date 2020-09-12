@@ -5,7 +5,7 @@ import (
 	"sort"
 )
 
-// FindTriplets returns all the triplets from an array so that some of 2 equals to third element
+// FindTriplets returns all the triplets from an array such that the sum of the first two elements is equal to the third element
 func FindTriplets(input []int) {
 	type Triplets struct {
 		First, Second, Third int
