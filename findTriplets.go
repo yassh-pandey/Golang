@@ -9,7 +9,7 @@ type Triplets struct {
 	First, Second, Third int
 }
 
-// FindTriplets returns all the triplets from an array such that the sum of the first two elements is equal to the third element
+// FindTriplets returns all the triplets from an array of positive integers such that the sum of the first two elements is equal to the third element
 func FindTriplets(input []int) []Triplets {
 	result := []Triplets{}
 	resultMap := map[Triplets]bool{}
@@ -44,6 +44,6 @@ func FindTriplets(input []int) []Triplets {
 	return result
 }
 func main() {
-	answer := FindTriplets([]int{5, 32, 1, 7, 10, 50, 19, 21, 2})
+	answer := FindTriplets([]int{5, 32, 1, 7, 10, 50, 39, 21, 2})
 	fmt.Println(answer)
 }
