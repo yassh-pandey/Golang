@@ -3,7 +3,10 @@ package main
 import "fmt"
 
 func main() {
-  // Let's assume that we have a slice of integers (numbers may repeat) then we need to sort the integers based on their counts with a no with more occurance coming before a no with lesser occurance. If two integers have the same count then the greater no will be placed before the smaller one (in terms of their values). The sorted output should be repetition free.
+  // Let's assume that we have a slice of integers (numbers may repeat) then we need to sort the integers based on their counts
+  // with a no with more occurance coming before a no with lesser occurance. 
+  // If two integers have the same count then the greater no will be placed before the smaller one (in terms of their values). 
+  // The sorted output should be repetition free.
 
   li := []int{4,1,1,2,2,2,8,9,16,16,5,5,5,5,11}
   sortBasedOnCount(li)
